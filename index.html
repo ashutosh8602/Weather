@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WeatherSite</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="weather-animation" id="weather-animation"></div>
+
+    <header class="site-header">
+        <nav class="nav">
+            <a href="#" class="brand">WeatherSite</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button class="unit-toggle" id="unit-toggle">°F</button></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌒</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Your daily weather at a glance</h1>
+            <p>Search for a city or use your location to get current conditions and a 5-day forecast.</p>
+            <div class="search">
+                <input type="text" id="city-input" placeholder="Enter city (e.g., Mumbai, London)" />
+                <button id="search-btn" aria-label="Search">Search</button>
+                <button id="geo-btn" aria-label="Use my location">Use my location</button>
+            </div>
+        </section>
+
+        <section class="weather" aria-label="Current weather">
+            <h2>Current Weather</h2>
+            <div id="current" class="weather-card">
+                <!-- filled by JS -->
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Temperature Trend</h2>
+            <div class="chart-container">
+                <canvas id="tempChart"></canvas>
+            </div>
+        </section>
+
+        <section class="forecast" aria-label="5 day forecast">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast" class="forecast-grid">
+                <!-- filled by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 WeatherSite</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
